@@ -19,18 +19,18 @@ export default function AdmitCard({
 
   return (
     <div
-      className={`admit-card ${isInk ? 'admit-card-ink bg-ink text-paper' : 'bg-paper text-ink'} pl-5 ${className}`}
+      className={`admit-card ${isInk ? 'admit-card-ink bg-paper-dim' : 'bg-paper'} pl-5 ${className}`}
     >
       <div
         className={`flex items-center justify-between border-b px-5 py-2.5 ${
-          isInk ? 'border-white/15' : 'border-line'
+          isInk ? 'border-line/60' : 'border-line'
         }`}
       >
-        <span className={`roll-code ${isInk ? 'text-cream/80' : 'text-ink-faint'}`}>
+        <span className="roll-code text-ink-faint">
           {eyebrow}
         </span>
         {rollCode && (
-          <span className={`roll-code ${isInk ? 'text-cream' : 'text-ink-faint'}`}>
+          <span className="roll-code text-ink-faint">
             {rollCode}
           </span>
         )}
@@ -41,7 +41,7 @@ export default function AdmitCard({
       {status && (
         <div
           className={`absolute right-4 top-11 -rotate-3 rounded-sm px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-wide shadow-stamp ${
-            statusVariant === 'red' ? 'bg-red text-paper' : 'bg-slate text-paper'
+            statusVariant === 'red' ? 'bg-red text-white' : 'bg-slate-dark text-white'
           }`}
         >
           {status}

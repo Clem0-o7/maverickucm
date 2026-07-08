@@ -1,7 +1,10 @@
-import { faculty } from '../data/faculty';
+import { courses } from '../data/courses';
 import ImagePlaceholder from '../components/ui/ImagePlaceholder';
 
 export default function About() {
+  const allMentors = courses.flatMap(c => c.mentors || []);
+  const uniqueMentors = Array.from(new Map(allMentors.map(m => [m.id, m])).values());
+
   return (
     <>
       <section className="border-b border-line bg-paper-dim">
@@ -38,9 +41,15 @@ export default function About() {
         </h2>
 
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {faculty.map((f) => (
+          {uniqueMentors.map((f) => (
             <div key={f.id} className="border-t-2 border-ink pt-5">
-              <ImagePlaceholder prompt={f.imagePrompt} ratio="aspect-square" className="rounded-md" />
+              {f.image ? (
+                <div className="aspect-square w-full overflow-hidden rounded-md bg-surface-dim">
+                  <img src={f.image} alt={f.name} className="h-full w-full object-cover" loading="lazy" />
+                </div>
+              ) : (
+                <ImagePlaceholder prompt="Mentor Placeholder" ratio="aspect-square" className="rounded-md" />
+              )}
               <h3 className="mt-4 font-display text-xl font-bold text-ink">{f.name}</h3>
               <p className="text-sm font-semibold text-red">{f.subject}</p>
               <p className="mt-2 text-sm text-ink-faint">{f.bio}</p>

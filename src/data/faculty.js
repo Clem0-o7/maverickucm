@@ -6,40 +6,40 @@
 export const faculty = [
   {
     id: 'f1',
-    name: 'Vikram Sethi',
-    subject: 'Mathematics',
-    bio: '14 years teaching Class 10–12 Mathematics. Ex-Head of Department at a Delhi CBSE school.',
-    imagePrompt:
-      'Placeholder professional headshot illustration of an Indian male teacher in his 40s, flat style, charcoal blazer, red tie accent',
-    courseIds: ['c10-cbse-complete', 'c10-foundation-jee-neet', 'c12-science-pcm'],
+    name: 'Karthick Sir',
+    subject: 'Physics',
+    bio: 'Renowned expert in conceptual physics with over 10 years of experience simplifying complex topics for Class 10.',
+    image: null,
+    coursePlanPdf: '/pdfs/class-10-physics-plan.pdf',
+    courseIds: ['c10-pcmb'],
   },
   {
     id: 'f2',
-    name: 'Dr. Meera Nair',
-    subject: 'Biology',
-    bio: 'PhD in Zoology. Specializes in NEET-pattern diagram-based teaching for Class 12 PCB.',
-    imagePrompt:
-      'Placeholder professional headshot illustration of an Indian female teacher in her 30s, flat style, slate blouse, warm background',
-    courseIds: ['c12-science-pcb', 'c10-foundation-jee-neet'],
+    name: 'Anjali Sharma',
+    subject: 'Chemistry',
+    bio: 'Expert at breaking down chemical equations and reactions into simple, easy-to-remember concepts.',
+    image: null,
+    coursePlanPdf: '/pdfs/class-10-chemistry-plan.pdf',
+    courseIds: ['c10-pcmb'],
   },
   {
     id: 'f3',
-    name: 'Arjun Kapoor',
-    subject: 'Physics',
-    bio: '10 years of experience simplifying numericals for both board exams and JEE Main.',
-    imagePrompt:
-      'Placeholder professional headshot illustration of an Indian male teacher in his 30s, flat style, charcoal shirt, red accent detail',
-    courseIds: ['c12-science-pcm', 'c12-science-pcb', 'c10-foundation-jee-neet'],
+    name: 'Vikram Sethi',
+    subject: 'Mathematics',
+    bio: '14 years teaching Mathematics. Focuses on strong logical foundations and quick problem-solving techniques.',
+    image: null,
+    coursePlanPdf: '/pdfs/class-10-maths-plan.pdf',
+    courseIds: ['c10-pcmb'],
   },
   {
     id: 'f4',
-    name: 'Priya Bhatt',
-    subject: 'Commerce & Economics',
-    bio: 'Chartered Accountant turned educator. Runs the CA Foundation orientation sessions.',
-    imagePrompt:
-      'Placeholder professional headshot illustration of an Indian female teacher in her 40s, flat style, slate blazer, warm background',
-    courseIds: ['c12-commerce', 'c12-humanities'],
-  },
+    name: 'Dr. Meera Nair',
+    subject: 'Biology',
+    bio: 'PhD in Zoology. Specializes in diagram-based teaching and making Biology highly scoring.',
+    image: null,
+    coursePlanPdf: '/pdfs/class-10-biology-plan.pdf',
+    courseIds: ['c10-pcmb'],
+  }
 ];
 
 /** Get faculty for a specific course by course id */

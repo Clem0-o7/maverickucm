@@ -7,15 +7,28 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply font-body text-ink bg-paper antialiased;
+    @apply font-body text-ink antialiased;
+    background-color: theme('colors.surface.DEFAULT', #0A0A0A);
   }
-  h1, h2, h3, h4 {
-    @apply font-display;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: theme('fontFamily.display');
+    letter-spacing: theme('letterSpacing.tightest', -0.02em);
   }
   /* Visible keyboard focus everywhere, brand-colored */
   :focus-visible {
-    outline: 2px solid #DA1E28;
+    outline: 2px solid theme('colors.primary.DEFAULT', #FF3B30);
     outline-offset: 2px;
+  }
+  
+  /* Input Fields: Darker than card background with 1px subtle border */
+  input, textarea, select {
+    @apply bg-black rounded transition-all duration-300;
+    border: 1px solid theme('colors.line');
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: theme('colors.primary.DEFAULT');
+    box-shadow: theme('boxShadow.glow-sm');
   }
 }
 
@@ -30,16 +43,26 @@
 
 @layer components {
   /*
-    Signature "Admit Card" motif — the whole site borrows the vernacular of an
-    Indian board-exam admit card / mark-sheet: perforated tear-stub edge,
-    a roll-number in monospace, and a corner photo box. Used for course
-    cards, the hero result card, and student ID-style testimonials.
+    Glassmorphism Cards
+    Translucent glass surfaces with 20px blur, 1px border.
   */
-  .admit-card {
-    @apply relative bg-paper rounded-md shadow-card border border-line overflow-hidden;
+  .glass-card {
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    @apply rounded-lg;
+    box-shadow: theme('boxShadow.card');
   }
 
-  /* Perforated dashed stub down the left edge, punched circles */
+  /* 
+    Admit Card Motif 
+    Keeping the perforated edge styling, but adapting it to the glass card.
+  */
+  .admit-card {
+    @apply relative glass-card overflow-hidden;
+  }
+
   .admit-card::before {
     content: '';
     position: absolute;
@@ -47,32 +70,45 @@
     bottom: 0;
     left: 0;
     width: 14px;
-    background-image: radial-gradient(circle at 0 10px, transparent 5px, var(--perf-bg, #F6F4EF) 5.5px);
+    background-image: radial-gradient(circle at 0 10px, transparent 5px, var(--perf-bg, #0A0A0A) 5.5px);
     background-size: 100% 20px;
     background-repeat: repeat-y;
     background-position: left top;
   }
 
-  .admit-card-ink::before {
-    --perf-bg: #221F1D;
+  .admit-card-dim::before {
+    --perf-bg: #141414;
   }
 
   .roll-code {
     @apply font-mono tracking-wide text-xs uppercase;
   }
 
-  /* subtle paper grain texture on dark ink sections */
   .grain {
     background-image: theme('backgroundImage.grain');
   }
 
-  /* Floating bob animation for Download App section icons */
   .download-float {
     animation: download-bob 3s ease-in-out infinite;
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
   }
 }
 
 @keyframes download-bob {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
 }

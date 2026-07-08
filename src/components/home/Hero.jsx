@@ -1,80 +1,50 @@
 import { ArrowRight } from 'lucide-react';
-import AdmitCard from '../ui/AdmitCard';
-import CountUp from '../ui/CountUp';
-import { stats } from '../../data/stats';
-
-const [resultStat, studentsStat, scorersStat] = stats;
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-line bg-paper">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:py-24 lg:px-8">
-        {/* Left: copy */}
-        <div>
-          <span className="roll-code text-red">Class 10 &amp; 12 · CBSE Board Coaching</span>
-          <h1 className="mt-4 font-display text-5xl font-black leading-[0.95] text-ink sm:text-6xl lg:text-7xl">
-            Board exams aren&apos;t
-            <br />
-            a gamble. <span className="text-red">They&apos;re a</span>
-            <br />
-            <span className="text-red">Maverick&apos;s</span> game.
-          </h1>
-          <p className="mt-6 max-w-md text-base text-ink-soft">
-            Weekly chapter tests, doubt-solving that doesn&apos;t make you wait, and mentors who
-            track your progress like it&apos;s their own report card. Built only for Class 10 and
-            12 — nothing else pulls our focus.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#courses"
-              className="inline-flex items-center gap-2 rounded-sm bg-red px-6 py-3 text-sm font-semibold uppercase tracking-wide text-paper transition-colors hover:bg-red-dark"
-            >
-              Explore Class 10
-              <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="#courses"
-              className="inline-flex items-center gap-2 rounded-sm border-2 border-ink px-6 py-3 text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-ink hover:text-paper"
-            >
-              Explore Class 12
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-        </div>
-
-        {/* Right: signature "result card" */}
-        <div className="relative mx-auto w-full max-w-sm lg:ml-auto lg:mr-0">
-          <AdmitCard
-            rollCode="MUI/2026/RESULT"
-            status="Promoted with distinction"
-            statusVariant="red"
-            variant="ink"
+    <section className="relative overflow-hidden border-b border-line bg-paper flex items-center min-h-[90vh]">
+      {/* Dynamic Background Gradients */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div 
+          className="absolute top-[20%] left-[20%] w-[50vw] h-[50vw] rounded-full blur-[100px] opacity-20 mix-blend-screen animate-blob"
+          style={{ background: 'radial-gradient(circle, rgba(225,29,72,1) 0%, rgba(0,0,0,0) 70%)' }}
+        />
+        <div 
+          className="absolute top-[30%] right-[10%] w-[40vw] h-[40vw] rounded-full blur-[100px] opacity-15 mix-blend-screen animate-blob animation-delay-2000"
+          style={{ background: 'radial-gradient(circle, rgba(254,148,0,1) 0%, rgba(0,0,0,0) 70%)' }}
+        />
+      </div>
+      
+      <div className="relative mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        <span className="roll-code text-red border border-red/20 bg-red/5 px-4 py-1.5 rounded-full backdrop-blur-sm">
+          Class 10 CBSE Board Coaching
+        </span>
+        <h1 className="mt-8 font-display text-5xl font-black leading-[1.1] text-ink sm:text-7xl lg:text-8xl tracking-tightest">
+          Board exams aren&apos;t a gamble. <br className="hidden md:block"/>
+          <span className="text-transparent bg-clip-text bg-primary-gradient">
+            They&apos;re a Maverick&apos;s game.
+          </span>
+        </h1>
+        <p className="mt-8 max-w-2xl text-base sm:text-lg text-ink-soft font-medium leading-relaxed">
+          Weekly chapter tests, doubt-solving that doesn&apos;t make you wait, and mentors who
+          track your progress like it&apos;s their own report card.
+        </p>
+        <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
+          <a
+            href="https://play.google.com/store/apps/details?id=co.diy.osbwj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex justify-center items-center gap-2 rounded-xl px-8 py-4 font-body text-sm font-bold uppercase tracking-wide text-white transition-all duration-300 bg-primary-gradient shadow-glow hover:shadow-[0_0_40px_-10px_rgba(225,29,72,0.6)] hover:scale-105"
           >
-            <p className="roll-code text-cream/70">Board Result — March 2026</p>
-            <p className="mt-6 font-display text-7xl font-black text-paper">
-              <CountUp value={resultStat.value} decimals={1} suffix={resultStat.suffix} />
-            </p>
-            <p className="mt-1 text-sm text-paper/60">Average score across Class 10 &amp; 12</p>
-
-            <div className="mt-6 grid grid-cols-2 gap-4 border-t border-white/15 pt-5">
-              <div>
-                <p className="font-display text-2xl font-bold text-paper">
-                  <CountUp value={studentsStat.value} suffix={studentsStat.suffix} />
-                </p>
-                <p className="text-xs text-paper/60">{studentsStat.label}</p>
-              </div>
-              <div>
-                <p className="font-display text-2xl font-bold text-paper">
-                  <CountUp value={scorersStat.value} suffix={scorersStat.suffix} />
-                </p>
-                <p className="text-xs text-paper/60">{scorersStat.label}</p>
-              </div>
-            </div>
-          </AdmitCard>
-          <div
-            className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-md border-2 border-red/30 sm:-bottom-6 sm:-right-6"
-            aria-hidden="true"
-          />
+            Get the App
+            <ArrowRight className="h-4 w-4" />
+          </a>
+          <a
+            href="#courses"
+            className="inline-flex justify-center items-center gap-2 rounded-xl px-8 py-4 font-body text-sm font-bold uppercase tracking-wide text-ink transition-all duration-300 bg-white/5 border border-white/10 hover:bg-white/10 hover:text-white"
+          >
+            Explore Class 10 Batch
+          </a>
         </div>
       </div>
     </section>
