@@ -8,10 +8,10 @@
  */
 
 export const contactInfo = {
-  phone: '+91 75581 81912',
+  phone: '+91 89405 20223',
   phoneHours: 'Mon–Sat, 9 am – 7 pm',
-  email: 'hello@maverickucm.in',
-  address: '4th Floor, Ashford Tower, Anna Salai, Chennai, Tamil Nadu 600002',
+  email: 'tkphysicz@gmail.com',
+  address: 'Perambalur, Tamil Nadu',
   instagram: '#',
   youtube: 'https://www.youtube.com/@tkphysicz4287',
   facebook: '#',
