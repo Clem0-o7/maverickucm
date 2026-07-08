@@ -18,7 +18,7 @@ export const courses = [
     grade: '10',
     stream: null,
     board: 'CBSE',
-    title: 'Class 10 — PCMB Complete Batch',
+    title: 'TITAN Batch - PCMB',
     tagline: 'Physics, Chemistry, Mathematics & Biology — everything you need for boards.',
     subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology'],
     duration: '11 months',
@@ -52,7 +52,7 @@ export const courses = [
         description: 'Round-the-clock peer and faculty support channel',
       },
     ],
-    image: '/courses/class-10/cover.png',
+    image: '/courses/class-10/cover.jpg',
     featured: true,
     mentors: [
       {
@@ -60,7 +60,7 @@ export const courses = [
         name: 'Karthick Sir',
         subject: 'Physics',
         bio: 'Renowned expert in conceptual physics with over 10 years of experience simplifying complex topics for Class 10.',
-        image: '/male.jpeg',
+        image: '/staffs/physics.jpg',
         coursePlanPdf: '/pdfs/class-10-physics-plan.pdf',
       },
       {
@@ -73,18 +73,18 @@ export const courses = [
       },
       {
         id: 'f3',
-        name: 'Mr. Ravi',
+        name: 'Mr. Rethik Raj',
         subject: 'Mathematics',
         bio: '14 years teaching Mathematics. Focuses on strong logical foundations and quick problem-solving techniques.',
-        image: '/male.jpeg',
+        image: '/staffs/math.jpg',
         coursePlanPdf: '/pdfs/class-10-maths-plan.pdf',
       },
       {
         id: 'f4',
-        name: 'Dr. Meera Nair',
+        name: 'Dr. Meera',
         subject: 'Biology',
         bio: 'PhD in Zoology. Specializes in diagram-based teaching and making Biology highly scoring.',
-        image: '/female.jpeg',
+        image: '/staffs/bio.jpg',
         coursePlanPdf: '/pdfs/class-10-biology-plan.pdf',
       }
     ],

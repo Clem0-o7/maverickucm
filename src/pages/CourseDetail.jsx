@@ -71,8 +71,8 @@ export default function CourseDetail() {
 
           {/* Course image */}
           {image && (
-            <div className="mt-8 aspect-[16/8] overflow-hidden rounded-xl bg-surface-dim">
-              <img src={image} alt={title} className="h-full w-full object-cover" loading="lazy" />
+            <div className="mt-8 aspect-[16/8] overflow-hidden rounded-xl bg-black flex items-center justify-center">
+              <img src={image} alt={title} className="h-full w-full object-contain" loading="lazy" />
             </div>
           )}
 
@@ -143,38 +143,54 @@ export default function CourseDetail() {
               <h2 className="mt-3 font-display text-2xl font-bold text-ink">
                 The mentors for this batch
               </h2>
-              <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {instructors.map((f) => (
-                  <div key={f.id} className="flex gap-4 glass-card p-4">
-                    {f.image ? (
-                      <img
-                        src={f.image}
-                        alt={f.name}
-                        className="w-20 h-20 shrink-0 rounded object-cover"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <div className="flex w-20 h-20 shrink-0 items-center justify-center rounded bg-surface-bright text-ink-faint font-display text-2xl font-bold">
-                        {f.name.charAt(0)}
-                      </div>
-                    )}
-                    <div className="min-w-0">
-                      <h3 className="font-display text-lg font-bold text-ink">{f.name}</h3>
-                      <div className="mt-1 inline-flex items-center rounded-full px-2 py-0.5 bg-red-light text-primary text-xs font-semibold tracking-wide">
-                        Specialist: {f.subject}
-                      </div>
-                      <p className="mt-2 text-sm text-ink-faint">{f.bio}</p>
+                  <div key={f.id} className="group relative flex flex-col rounded-3xl bg-black border border-white/5 transition-all duration-300 hover:border-white/10 hover:shadow-2xl overflow-hidden">
+                    
+                    {/* Image Area - Fixed height portrait space */}
+                    <div className="relative h-72 w-full shrink-0 bg-black flex items-end justify-center pt-8">
+                      {f.image ? (
+                        <img
+                          src={f.image}
+                          alt={f.name}
+                          className="max-h-full w-full object-contain object-bottom transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                          loading="lazy"
+                        />
+                      ) : (
+                         <div className="flex h-full w-full items-center justify-center">
+                          <span className="font-display text-5xl font-bold text-red/20 group-hover:text-red/40 transition-colors">
+                            {f.name.charAt(0)}
+                          </span>
+                        </div>
+                      )}
+                      {/* Very subtle bottom gradient just to smooth out any harsh edges from the photo */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 pointer-events-none" />
+                    </div>
+
+                    {/* Content Area */}
+                    <div className="relative z-10 flex flex-1 flex-col items-center text-center p-6 sm:p-8 pt-0">
+                      <span className="text-[10px] font-bold tracking-widest text-red uppercase mb-3">
+                        {f.subject} Specialist
+                      </span>
+                      <h3 className="font-display text-3xl font-bold text-white transition-colors duration-300">{f.name}</h3>
+                      
+                      <p className="mt-4 text-sm leading-relaxed text-white/50">
+                        {f.bio}
+                      </p>
+                      
                       {f.coursePlanPdf && (
-                        <a
-                          href={f.coursePlanPdf}
-                          download
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-primary hover:text-white transition-colors"
-                        >
-                          <Download className="h-3.5 w-3.5" />
-                           {f.subject} Lecture Plan
-                        </a>
+                        <div className="mt-8 w-full mt-auto pt-4">
+                          <a
+                            href={f.coursePlanPdf}
+                            download
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white/5 px-4 py-3.5 text-xs font-bold uppercase tracking-wider text-white/80 transition-all duration-300 hover:bg-white hover:text-black border border-white/5 hover:border-white"
+                          >
+                            <Download className="h-4 w-4" />
+                            Lecture Plan
+                          </a>
+                        </div>
                       )}
                     </div>
                   </div>
