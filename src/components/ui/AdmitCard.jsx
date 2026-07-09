@@ -29,11 +29,11 @@ export default function AdmitCard({
         <span className="roll-code text-ink-faint">
           {eyebrow}
         </span>
-        {rollCode && (
+        {/* {rollCode && (
           <span className="roll-code text-ink-faint">
             {rollCode}
           </span>
-        )}
+        )} */}
       </div>
 
       <div className="px-5 py-5">{children}</div>

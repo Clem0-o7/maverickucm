@@ -16,19 +16,20 @@ export default function Hero() {
       </div>
       
       <div className="relative mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        <span className="roll-code text-red border border-red/20 bg-red/5 px-4 py-1.5 rounded-full backdrop-blur-sm">
+        {/* <span className="roll-code text-red border border-red/20 bg-red/5 px-4 py-1.5 rounded-full backdrop-blur-sm">
           Class 10 CBSE Board Coaching
-        </span>
+        </span> */}
         <h1 className="mt-8 font-display text-5xl font-black leading-[1.1] text-ink sm:text-7xl lg:text-8xl tracking-tightest">
-          Board exams aren&apos;t a gamble. <br className="hidden md:block"/>
-          <span className="text-transparent bg-clip-text bg-primary-gradient">
-            They&apos;re a Maverick&apos;s game.
-          </span>
+          <span className="text-white">Learn Beyond </span>
+          <span className="text-red">Books.</span>
+          <span className="text-white"><br className="hidden md:block" />Master Beyond </span>
+          <span className="text-red">Limits.</span>
+          <span className="text-white"></span>
         </h1>
-        <p className="mt-8 max-w-2xl text-base sm:text-lg text-ink-soft font-medium leading-relaxed">
+        {/* <p className="mt-8 max-w-2xl text-base sm:text-lg text-ink-soft font-medium leading-relaxed">
           Weekly chapter tests, doubt-solving that doesn&apos;t make you wait, and mentors who
           track your progress like it&apos;s their own report card.
-        </p>
+        </p> */}
         <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
           <a
             href="https://play.google.com/store/apps/details?id=co.diy.osbwj"

@@ -59,12 +59,12 @@ export default function CourseCard({ course }) {
           ))}
         </ul>
 
-        <div className="mt-5 flex items-center gap-1.5 text-xs text-ink-faint">
+        {/* <div className="mt-5 flex items-center gap-1.5 text-xs text-ink-faint">
           <Users className="h-3.5 w-3.5" />
           <span>
             {seatsLeft} of {seatsTotal} seats left
           </span>
-        </div>
+        </div> */}
 
         <div className="mt-auto flex flex-col xl:flex-row xl:items-end justify-between gap-4 border-t border-line pt-4 mt-5">
           <div>

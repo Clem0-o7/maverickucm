@@ -131,13 +131,13 @@ export default function CourseDetail() {
               <p className="mt-2 text-sm font-semibold text-ink">{batchStarts}</p>
               <p className="text-xs text-ink-faint">Batch starts</p>
             </div>
-            <div>
+            {/* <div>
               <Users className="h-5 w-5 text-slate-dark" />
               <p className="mt-2 text-sm font-semibold text-ink">
                 {seatsLeft}/{seatsTotal}
               </p>
               <p className="text-xs text-ink-faint">Seats left</p>
-            </div>
+            </div> */}
           </div>
 
           {/* Course Instructors */}
@@ -217,13 +217,13 @@ export default function CourseDetail() {
               </p>
               <p className="mt-1 text-xs text-ink-faint">one-time, full course access</p>
 
-                <Button variant="primary" className="w-full" onClick={() => setShowModal(true)}>
+                <Button variant="primary" className="mt-1 w-full" onClick={() => setShowModal(true)}>
                   Enroll now
                 </Button>
 
-              <p className="mt-4 text-center text-xs text-ink-faint">
+              {/* <p className="mt-4 text-center text-xs text-ink-faint">
                 {seatsLeft} of {seatsTotal} seats remaining
-              </p>
+              </p> */}
             </AdmitCard>
           </div>
         </div>

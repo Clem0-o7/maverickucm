@@ -21,7 +21,7 @@ export const courses = [
     title: 'TITAN Batch - PCMB',
     tagline: 'Physics, Chemistry, Mathematics & Biology — everything you need for boards.',
     subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology'],
-    duration: '11 months',
+    duration: 'Till Board Exam',
     mode: 'Live Online + Recorded',
     batchStarts: 'Jul 2026',
     seatsTotal: 80,
@@ -51,6 +51,9 @@ export const courses = [
         title: 'Telegram Group for Doubt Support',
         description: 'Round-the-clock peer and faculty support channel',
       },
+      {
+        title: "Recordings will be provided for English and Social Science"
+      }
     ],
     image: '/courses/class-10/cover.jpg',
     featured: true,
