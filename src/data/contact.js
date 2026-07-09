@@ -11,7 +11,7 @@ export const contactInfo = {
   phone: '+91 89405 20223',
   phoneHours: 'Mon–Sat, 9 am – 7 pm',
   email: 'tkphysicz@gmail.com',
-  address: 'Perambalur, Tamil Nadu',
+  address: 'Tirchy, Tamil Nadu',
   instagram: '#',
   youtube: 'https://www.youtube.com/@tkphysicz4287',
   facebook: '#',

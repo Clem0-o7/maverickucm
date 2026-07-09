@@ -89,6 +89,7 @@ export const courses = [
       }
     ],
   },
+
 ];
 
 // ---- Small helpers used across the app (keep alongside the data) ----------
