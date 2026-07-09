@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CheckCircle2, Clock, Calendar, Users, MonitorPlay, ChevronLeft, Download, X, Smartphone } from 'lucide-react';
 import { getCourseBySlug } from '../data/courses';
@@ -10,6 +10,10 @@ export default function CourseDetail() {
   const { slug } = useParams();
   const course = getCourseBySlug(slug);
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!course) {
     return (
@@ -153,7 +157,7 @@ export default function CourseDetail() {
                         <img
                           src={f.image}
                           alt={f.name}
-                          className="max-h-full w-full object-contain object-bottom transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                          className="max-h-full w-full object-contain object-bottom origin-bottom transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                           loading="lazy"
                         />
                       ) : (
@@ -168,7 +172,7 @@ export default function CourseDetail() {
                     </div>
 
                     {/* Content Area */}
-                    <div className="relative z-10 flex flex-1 flex-col items-center text-center p-6 sm:p-8 pt-0">
+                    <div className="relative z-10 flex flex-1 flex-col items-center text-center p-6 sm:p-8 pt-0 bg-black">
                       <span className="text-[10px] font-bold tracking-widest text-red uppercase mb-3">
                         {f.subject} Specialist
                       </span>

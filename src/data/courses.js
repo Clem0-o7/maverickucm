@@ -89,6 +89,84 @@ export const courses = [
       }
     ],
   },
+  {
+    id: 'c10-pcmb',
+    slug: 'class-10-pcmb',
+    active: true,
+    grade: '10',
+    stream: null,
+    board: 'CBSE',
+    title: 'TITAN Batch - PCMB',
+    tagline: 'Physics, Chemistry, Mathematics & Biology — everything you need for boards.',
+    subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology'],
+    duration: '11 months',
+    mode: 'Live Online + Recorded',
+    batchStarts: 'Jul 2026',
+    seatsTotal: 80,
+    seatsLeft: 23,
+    feeDiscounted: 4999,
+    feeOriginal: 9999,
+    rating: 4.8,
+    studentsEnrolled: 2140,
+    highlights: [
+      {
+        title: 'Live Lectures by Top Faculties',
+        description: 'Interactive live classes taught by experienced subject experts',
+      },
+      {
+        title: 'Daily Practice Problems (DPPs)',
+        description: 'Curated daily problem sets to reinforce every topic',
+      },
+      {
+        title: 'Regular Tests',
+        description: 'Scheduled assessments to track progress and readiness',
+      },
+      {
+        title: '1:1 Guidance',
+        description: 'Personal mentorship and doubt-clearing support',
+      },
+      {
+        title: 'Telegram Group for Doubt Support',
+        description: 'Round-the-clock peer and faculty support channel',
+      },
+    ],
+    image: '/courses/class-10/cover.jpg',
+    featured: true,
+    mentors: [
+      {
+        id: 'f1',
+        name: 'Karthick Sir',
+        subject: 'Physics',
+        bio: 'Renowned expert in conceptual physics with over 10 years of experience simplifying complex topics for Class 10.',
+        image: '/staffs/physics.jpg',
+        coursePlanPdf: '/pdfs/class-10-physics-plan.pdf',
+      },
+      {
+        id: 'f2',
+        name: 'Mr. Anand',
+        subject: 'Chemistry',
+        bio: 'Expert at breaking down chemical equations and reactions into simple, easy-to-remember concepts.',
+        image: '/staffs/chemistry.jpeg',
+        coursePlanPdf: '/pdfs/class-10-chemistry-plan.pdf',
+      },
+      {
+        id: 'f3',
+        name: 'Mr. Rethik Raj',
+        subject: 'Mathematics',
+        bio: '14 years teaching Mathematics. Focuses on strong logical foundations and quick problem-solving techniques.',
+        image: '/staffs/math.jpg',
+        coursePlanPdf: '/pdfs/class-10-maths-plan.pdf',
+      },
+      {
+        id: 'f4',
+        name: 'Dr. Meera',
+        subject: 'Biology',
+        bio: 'PhD in Zoology. Specializes in diagram-based teaching and making Biology highly scoring.',
+        image: '/staffs/bio.jpg',
+        coursePlanPdf: '/pdfs/class-10-biology-plan.pdf',
+      }
+    ],
+  },
 ];
 
 // ---- Small helpers used across the app (keep alongside the data) ----------

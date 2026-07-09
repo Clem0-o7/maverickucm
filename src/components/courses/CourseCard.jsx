@@ -66,18 +66,18 @@ export default function CourseCard({ course }) {
           </span>
         </div>
 
-        <div className="mt-auto flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-t border-line pt-4 mt-5">
+        <div className="mt-auto flex flex-col xl:flex-row xl:items-end justify-between gap-4 border-t border-line pt-4 mt-5">
           <div>
             <p className="font-mono text-xs text-ink-faint line-through">₹{feeOriginal.toLocaleString('en-IN')}</p>
-            <p className="font-display text-3xl sm:text-2xl font-extrabold text-red">
+            <p className="font-display text-3xl xl:text-2xl font-extrabold text-red">
               ₹{feeDiscounted.toLocaleString('en-IN')}
             </p>
           </div>
-          <div className="flex w-full sm:w-auto flex-col sm:flex-row sm:items-center gap-2 mt-4 sm:mt-0">
-            <Button to={`/courses/${slug}`} variant="dark" className="w-full sm:w-auto justify-center !px-3 sm:!px-4 !py-3 sm:!py-2.5 text-sm">
+          <div className="flex w-full xl:w-auto flex-col xl:flex-row xl:items-center gap-2 mt-4 xl:mt-0">
+            <Button to={`/courses/${slug}`} variant="dark" className="w-full xl:w-auto justify-center !px-3 xl:!px-4 !py-3 xl:!py-2.5 text-sm">
               Details
             </Button>
-            <Button variant="primary" className="w-full sm:w-auto justify-center !px-3 sm:!px-4 !py-3 sm:!py-2.5 text-sm" onClick={() => setShowModal(true)}>
+            <Button variant="primary" className="w-full xl:w-auto justify-center !px-3 xl:!px-4 !py-3 xl:!py-2.5 text-sm" onClick={() => setShowModal(true)}>
               Enroll Now
               <ArrowUpRight className="h-4 w-4 shrink-0" />
             </Button>
