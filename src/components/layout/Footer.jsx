@@ -27,7 +27,7 @@ export default function Footer() {
           <div>
             <img src="/logo/logo-dark.png" alt="Maverick UcM Institute" className="h-12 w-auto" />
             <p className="mt-4 max-w-xs text-sm text-ink-soft">
-              Board-exam coaching for Class 10 &amp; 12 — built around results, not rote.
+              Learn Beyond Books. Master Beyond Limits
             </p>
 
             <div className="mt-6 space-y-3 text-sm text-ink-soft">
@@ -53,21 +53,21 @@ export default function Footer() {
             </div>
 
             <div className="mt-6 flex gap-4">
-              {contactInfo.instagram && (
+              {/* {contactInfo.instagram && (
                 <a href={contactInfo.instagram} aria-label="Instagram" className="text-ink-soft hover:text-red">
                   <Instagram className="h-5 w-5" />
                 </a>
-              )}
+              )} */}
               {contactInfo.youtube && (
                 <a href={contactInfo.youtube} aria-label="YouTube" className="text-ink-soft hover:text-red">
                   <Youtube className="h-5 w-5" />
                 </a>
               )}
-              {contactInfo.facebook && (
+              {/* {contactInfo.facebook && (
                 <a href={contactInfo.facebook} aria-label="Facebook" className="text-ink-soft hover:text-red">
                   <Facebook className="h-5 w-5" />
                 </a>
-              )}
+              )} */}
             </div>
           </div>
 
