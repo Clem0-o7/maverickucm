@@ -80,7 +80,7 @@ export const courses = [
         subject: 'Mathematics',
         bio: '3+ Years Exp',
         image: '/staffs/math.jpg',
-        coursePlanPdf: '/pdfs/Mathematics_Lecture_Planner_Final.pdf',
+        coursePlanPdf: '/pdfs/Maths_Lecture_Planner_Final.pdf',
       },
       {
         id: 'f4',
