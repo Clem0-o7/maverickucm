@@ -11,8 +11,7 @@ export default function CTASection() {
               Admissions for the 2026&ndash;27 batch are open.
             </h2>
             <p className="mt-3 text-ink-soft">
-              Seats are limited on purpose — every mentor tracks a fixed set of students, not a
-              crowd.
+              Seats are limited on purpose — every mentor tracks a fixed set of students.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">

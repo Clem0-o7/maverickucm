@@ -5,10 +5,10 @@
 export const testimonials = [
   {
     id: 't1',
-    name: 'Hariraj',
-    detail: '494/500 in 10th',
-    quote: "I scored 494/500 in my 10th boards! The structured approach and clear explanations gave me the confidence to achieve this milestone.",
-    videoId: '2ZvMsbnKnpM'
+    name: 'Mahilnila',
+    detail: 'Class 10',
+    quote: "The 1-shot sessions by Karthick Sir right before my 10th exams gave me the exact confidence boost and rapid revision I needed.",
+    videoId: 'y5s66p0kpDQ'
   },
   {
     id: 't2',
@@ -33,9 +33,10 @@ export const testimonials = [
   },
   {
     id: 't5',
-    name: 'Mahilnila',
-    detail: 'Class 10',
-    quote: "The 1-shot sessions by Karthick Sir right before my 10th exams gave me the exact confidence boost and rapid revision I needed.",
-    videoId: 'y5s66p0kpDQ'
+    name: 'Hariraj',
+    detail: '494/500 in 10th',
+    quote: "I scored 494/500 in my 10th boards! The structured approach and clear explanations gave me the confidence to achieve this milestone.",
+    videoId: '2ZvMsbnKnpM'
   }
+  
 ];
